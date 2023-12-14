@@ -2,7 +2,7 @@
 
 ## Description
 
-BryteSchemes API provides REST endpoints that provide utility to retrieve your account data as JSON.
+BryteSchemes API provides REST endpoints that provide utility to retrieve your account data as JSON with programs using the Bryte-Descriptor library (https://github.com/brytelands/bryte-descriptor).
 
 Try it here: https://test.brytelands.io/
 
