@@ -1,0 +1,28 @@
+[package]
+name = "bryteschemes_api"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+anyhow = "1.0.75"
+log = "0.4.20"
+tokio = { version = "1.28", features = ["macros", "sync", "rt-multi-thread"] }
+tokio-stream = "0.1.14"
+reqwest = "0.11.22"
+warp = "0.3"
+serde = {version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = { version = "0.3", default-features = false }
+uuid = { version = "1.1.2", features = ["serde", "v4", "v5"] }
+mongodb = "2.7.0"
+base64 = "0.21.1"
+utoipa = "4.0.0"
+utoipa-swagger-ui = "4.0.0"
+utoipa-gen = "4.0.0"
+env_logger = "0.10.0"
+
+#bryte_descriptor_client = "0.1.0-alpha.1"
+bryte_descriptor_state = "0.1.0-alpha.1"
+bryte_descriptor_client = "0.1.0-alpha.2"
+lazy_static = "1.4.0"

@@ -1,0 +1,19 @@
+version: '3.7'
+
+networks:
+  bryteschemes:
+
+services:
+
+  bryteschemes-api:
+    image: brytelands/bryteschemes-api
+    tty: true
+#    environment:
+#      BRYTESCHEMES_API_RPC_URL_DEV: https://api.devnet.solana.com
+#      BRYTESCHEMES_API_RPC_URL_TEST: https://api.testnet.solana.com
+#      BRYTESCHEMES_API_RPC_URL_MAIN: https://api.mainnet.solana.com
+#      BRYTESCHEMES_API_RPC_URL_LOCAL: http://localhost:8899
+    ports:
+      - "8080:8080"
+    networks:
+      - bryteschemes
