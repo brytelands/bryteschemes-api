@@ -6,6 +6,8 @@ BryteSchemes API provides REST endpoints that provide utility to retrieve your a
 
 Try it here: https://test.brytelands.io/
 
+[![Watch the demo](https://img.youtube.com/vi/0jN9Wz95tGA/hqdefault.jpg)](https://www.youtube.com/embed/0jN9Wz95tGA)
+
 ## Build
 
 ```shell
