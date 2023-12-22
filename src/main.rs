@@ -31,7 +31,7 @@ async fn main() {
             description = "The BryteSchemes API provides functionality to get account and event data.",
             version = "0.0.1"
         ),
-        paths(handler::account_handler, handler::discriminator, handler::discriminator_offline),
+        paths(handler::account_handler, handler::discriminator, handler::discriminator_offline, handler::account_schema_handler),
         tags(
         (name = "handler", description = "Account and Event API endpoints")
         )
@@ -57,6 +57,12 @@ async fn main() {
         .and(warp::path::param())
         .and_then(handler::account_handler);
 
+    let account_schema_route = warp::path("account-schema")
+        .and(warp::path::param())
+        .and(warp::path::param())
+        .and(warp::path::param())
+        .and_then(handler::account_schema_handler);
+
     let discriminator_offline_route = warp::path("discriminator-offline")
         .and(warp::path::param())
         .and(warp::path::param())
@@ -70,6 +76,7 @@ async fn main() {
 
     let routes = health_route
         .or(account_route)
+        .or(account_schema_route)
         .or(discriminator_offline_route)
         .or(discriminator_route)
         .or(swagger_ui)

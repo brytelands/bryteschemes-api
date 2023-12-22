@@ -1,7 +1,6 @@
 use anyhow::Result;
 use std::collections::HashMap;
 use std::env;
-use std::str::FromStr;
 
 #[derive(Clone, Default, Eq, PartialEq)]
 pub struct Config {
@@ -17,7 +16,7 @@ impl Config {
         let rpc_url_main = env::var("BRYTESCHEMES_API_RPC_URL_DEV")
             .unwrap_or("https://api.mainnet.solana.com".to_string());
         let rpc_url_local = env::var("BRYTESCHEMES_API_RPC_URL_LOCAL")
-            .unwrap_or("http://localhost:8000".to_string());
+            .unwrap_or("http://localhost:8899".to_string());
 
         let mut rpc_urls = HashMap::new();
         rpc_urls.insert("Dev".to_string(), rpc_url_dev);
